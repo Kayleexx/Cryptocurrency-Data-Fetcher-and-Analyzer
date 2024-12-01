@@ -9,7 +9,7 @@ import os
 logging.basicConfig(filename='crypto_data.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # CoinMarketCap API (sandbox) key
-CMC_SANDBOX_API_KEY = 'f5c16d6f-c1d4-4dc3-a222-19f16679aaa7'
+CMC_SANDBOX_API_KEY = 'API_KEY'
 
 # Define the expected columns for the DataFrame
 expected_columns = [

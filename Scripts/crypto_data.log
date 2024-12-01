@@ -1,0 +1,24 @@
+2024-12-02 00:35:57,718 - ERROR - API request failed with status code: 403
+2024-12-02 00:40:59,028 - ERROR - API request failed with status code: 403
+2024-12-02 00:43:24,179 - ERROR - API request failed with status code: 403
+2024-12-02 00:44:33,914 - ERROR - API request failed with status code: 401
+2024-12-02 00:48:05,691 - ERROR - Error updating Excel: name 'os' is not defined
+2024-12-02 00:49:48,325 - ERROR - Error updating Excel: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2024-12-02 00:52:29,331 - ERROR - Error updating Excel: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2024-12-02 00:54:04,473 - ERROR - Error updating Excel: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2024-12-02 00:58:14,259 - ERROR - Error updating Excel: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2024-12-02 01:00:07,620 - ERROR - Error updating Excel: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2024-12-02 01:00:24,326 - ERROR - Error updating Excel: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2024-12-02 01:02:39,425 - INFO - Data successfully updated in Excel.
+2024-12-02 01:04:53,054 - ERROR - Error updating Excel: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2024-12-02 01:07:42,077 - ERROR - Error updating Excel: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2024-12-02 01:11:48,025 - ERROR - Error updating Excel: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2024-12-02 01:21:29,485 - INFO - Data successfully updated in CSV.
+2024-12-02 01:22:39,742 - INFO - Data successfully updated in CSV.
+2024-12-02 01:27:45,917 - INFO - Data successfully updated in CSV.
+2024-12-02 01:31:27,822 - INFO - Data successfully updated in CSV.
+2024-12-02 01:33:09,195 - INFO - Data successfully updated in CSV.
+2024-12-02 01:34:23,276 - INFO - Data successfully updated in CSV.
+2024-12-02 01:38:19,616 - INFO - Data successfully updated in CSV.
+2024-12-02 01:43:20,567 - INFO - Data successfully updated in CSV.
+2024-12-02 01:46:36,206 - INFO - Data successfully updated in CSV.

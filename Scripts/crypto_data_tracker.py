@@ -11,8 +11,19 @@ import pythoncom
 logging.basicConfig(filename='crypto_data.log', level=logging.INFO, 
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
+<<<<<<< HEAD
 # CoinGecko API (free public API)
 COINGECKO_API_URL = 'https://api.coingecko.com/api/v3/coins/markets'
+=======
+# CoinMarketCap API (sandbox) key
+CMC_SANDBOX_API_KEY = 'API_KEY'
+
+# Define the expected columns for the DataFrame
+expected_columns = [
+    "Name", "Symbol", "Current Price (USD)", "Market Cap", 
+    "24h Trading Volume", "24h Price Change (%)"
+]
+>>>>>>> 8c8f0a2cd8b8e5208af83f638b4ea01dbd9e275d
 
 def fetch_top_cryptocurrencies():
     """

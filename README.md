@@ -1,6 +1,6 @@
 # Cryptocurrency Data Fetcher and Analyzer
 
-This Python project fetches live cryptocurrency data from the CoinMarketCap Sandbox API, performs basic analysis, and stores the data in a CSV file. The project also logs the results and analysis into a separate log file for tracking.
+This Python project fetches live cryptocurrency data from the CoinMarketCap Sandbox API, performs basic analysis, and stores the data in an excel sheet. The project also logs the results and analysis into a separate log file for tracking.
 
 ## Features
 

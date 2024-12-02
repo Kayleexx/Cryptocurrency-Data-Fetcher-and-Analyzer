@@ -43,15 +43,18 @@ git clone https://github.com/your-username/crypto-data-fetcher.git
 cd crypto-data-fetcher
 ```
 
-2. Update the `CMC_SANDBOX_API_KEY` in the script (`crypto_data_fetcher.py`) with your CoinMarketCap API key.
 
-3. Run the script:
+2. Run the script:
 
 ```bash
 python crypto_data_fetcher.py
 ```
 
-The script will start fetching data and appending it to the `crypto_data.csv` file every 5 minutes. The analysis results and the last update time will also be added to the CSV file.
+### Data will be updating every 5 minutes and following is the output:
+![image](https://github.com/user-attachments/assets/acc278f8-8c55-4316-a04c-388ceb76966a)
+
+
+
 
 ## Files
 

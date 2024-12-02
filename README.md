@@ -9,8 +9,8 @@ This Python project fetches live cryptocurrency data from the CoinMarketCap Sand
   - Top 5 cryptocurrencies by market cap.
   - Average price of all fetched cryptocurrencies.
   - Highest and lowest 24-hour price change.
-- Saves the cryptocurrency data into a CSV file.
-- Appends analysis results to the CSV file.
+- Saves the cryptocurrency data into an excel sheet.
+- Appends analysis results to the excel sheet.
 - Logs all activities, errors, and updates in a log file (`crypto_data.log`).
 - Updates the data every 5 minutes.
 

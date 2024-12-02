@@ -28,11 +28,7 @@ pip install requests pandas
 
 ## API Key
 
-This project uses the CoinMarketCap Sandbox API. You need a valid API key to fetch cryptocurrency data.
-
-1. Go to the [CoinMarketCap API](https://coinmarketcap.com/api/) website.
-2. Create an account or log in to get your API key.
-3. Replace the `CMC_SANDBOX_API_KEY` variable with your actual API key in the script.
+This project uses the CoinGecko API.
 
 ## How to Run
 

@@ -22,3 +22,9 @@
 2024-12-02 01:38:19,616 - INFO - Data successfully updated in CSV.
 2024-12-02 01:43:20,567 - INFO - Data successfully updated in CSV.
 2024-12-02 01:46:36,206 - INFO - Data successfully updated in CSV.
+2024-12-02 01:51:37,372 - INFO - Data successfully updated in CSV.
+2024-12-02 01:56:38,616 - INFO - Data successfully updated in CSV.
+2024-12-02 02:01:39,730 - INFO - Data successfully updated in CSV.
+2024-12-03 00:02:53,411 - ERROR - Excel update error: (-2147352567, 'Exception occurred.', (0, 'Microsoft Excel', "Microsoft Excel cannot access the file 'C:\\8AA71000'. There are several possible reasons:\n\n• The file name or path does not exist.\n• The file is being used by another program.\n• The workbook you are trying to save has the same name as a currently open workbook.", 'xlmain11.chm', 0, -2146827284), None)
+2024-12-03 00:04:22,813 - INFO - Cryptocurrency data updated successfully.
+2024-12-03 00:06:48,598 - INFO - Cryptocurrency data updated successfully.

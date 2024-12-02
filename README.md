@@ -55,13 +55,6 @@ python crypto_data_fetcher.py
 
 
 
-
-## Files
-
-- `crypto_data_fetcher.py`: Main script that fetches data, performs analysis, and updates the CSV.
-- `crypto_data.csv`: Output CSV file where the cryptocurrency data is stored.
-- `crypto_data.log`: Log file that records the activities, errors, and updates.
-
 ## Log File
 
 The log file (`crypto_data.log`) contains information about the script's execution, including:

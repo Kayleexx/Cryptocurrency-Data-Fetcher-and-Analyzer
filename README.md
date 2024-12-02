@@ -39,7 +39,7 @@ This project uses the CoinMarketCap Sandbox API. You need a valid API key to fet
 1. Clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/your-username/crypto-data-fetcher.git
+git clone https://github.com/Kayleexx/Cryptocurrency-Data-Fetcher-and-Analyzer.git
 cd crypto-data-fetcher
 ```
 

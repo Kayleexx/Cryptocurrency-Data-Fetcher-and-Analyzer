@@ -11,10 +11,10 @@ import pythoncom
 logging.basicConfig(filename='crypto_data.log', level=logging.INFO, 
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
-<<<<<<< HEAD
+
 # CoinGecko API (free public API)
 COINGECKO_API_URL = 'https://api.coingecko.com/api/v3/coins/markets'
-=======
+
 # CoinMarketCap API (sandbox) key
 CMC_SANDBOX_API_KEY = 'API_KEY'
 
@@ -23,7 +23,6 @@ expected_columns = [
     "Name", "Symbol", "Current Price (USD)", "Market Cap", 
     "24h Trading Volume", "24h Price Change (%)"
 ]
->>>>>>> 8c8f0a2cd8b8e5208af83f638b4ea01dbd9e275d
 
 def fetch_top_cryptocurrencies():
     """
@@ -120,12 +119,12 @@ def update_excel_sheet():
         # Prepare sheets
         sheet_names = [sheet.Name for sheet in wb.Sheets]
         
-        # Cryptocurrency Data Sheet
+   
         ws_data = wb.Sheets('Cryptocurrency Data') if 'Cryptocurrency Data' in sheet_names \
                   else wb.Sheets.Add(After=wb.Sheets(wb.Sheets.Count))
         ws_data.Name = 'Cryptocurrency Data'
         
-        # Market Analysis Sheet
+        
         ws_analysis = wb.Sheets('Market Analysis') if 'Market Analysis' in sheet_names \
                       else wb.Sheets.Add(After=wb.Sheets(wb.Sheets.Count))
         ws_analysis.Name = 'Market Analysis'
@@ -138,20 +137,19 @@ def update_excel_sheet():
                 # Cryptocurrency Data Sheet
                 ws_data.Cells.Clear()
                 
-                # Write headers
+               
                 headers = crypto_df.columns.tolist()
                 for col, header in enumerate(headers, start=1):
                     ws_data.Cells(1, col).Value = header
                 
-                # Write data
+                
                 for row in range(len(crypto_df)):
                     for col, header in enumerate(headers, start=1):
                         ws_data.Cells(row+2, col).Value = crypto_df.iloc[row][header]
                 
-                # Perform analysis
                 analysis = perform_data_analysis(crypto_df)
                 
-                # Market Analysis Sheet
+               
                 ws_analysis.Cells.Clear()
                 ws_analysis.Cells(1, 1).Value = 'Analysis Metric'
                 ws_analysis.Cells(1, 2).Value = 'Value'
@@ -160,11 +158,11 @@ def update_excel_sheet():
                     ws_analysis.Cells(row, 1).Value = metric
                     ws_analysis.Cells(row, 2).Value = str(value)
                 
-                # Auto-fit columns
+              
                 ws_data.Columns.AutoFit()
                 ws_analysis.Columns.AutoFit()
                 
-                # Save workbook
+           
                 wb.Save()
                 
                 logging.info("Cryptocurrency data updated successfully.")

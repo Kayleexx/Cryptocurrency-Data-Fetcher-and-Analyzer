@@ -11,18 +11,8 @@ import pythoncom
 logging.basicConfig(filename='crypto_data.log', level=logging.INFO, 
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
-
 # CoinGecko API (free public API)
 COINGECKO_API_URL = 'https://api.coingecko.com/api/v3/coins/markets'
-
-# CoinMarketCap API (sandbox) key
-CMC_SANDBOX_API_KEY = 'API_KEY'
-
-# Define the expected columns for the DataFrame
-expected_columns = [
-    "Name", "Symbol", "Current Price (USD)", "Market Cap", 
-    "24h Trading Volume", "24h Price Change (%)"
-]
 
 def fetch_top_cryptocurrencies():
     """
@@ -100,7 +90,7 @@ def update_excel_sheet():
     pythoncom.CoInitialize()  # Important for multi-threaded COM usage
     
     try:
-        # Determine the correct file path
+     
         script_dir = os.path.dirname(os.path.abspath(__file__))
         excel_file_path = os.path.join(script_dir, 'Cryptocurrency_Tracker.xlsx')
         
@@ -109,47 +99,48 @@ def update_excel_sheet():
         excel.Visible = True
         excel.DisplayAlerts = False  # Suppress any warning dialogs
         
-        # Create or open workbook
+    
         try:
             wb = excel.Workbooks.Open(excel_file_path)
         except:
             wb = excel.Workbooks.Add()
             wb.SaveAs(excel_file_path)
         
-        # Prepare sheets
+        
         sheet_names = [sheet.Name for sheet in wb.Sheets]
         
-   
+       
         ws_data = wb.Sheets('Cryptocurrency Data') if 'Cryptocurrency Data' in sheet_names \
                   else wb.Sheets.Add(After=wb.Sheets(wb.Sheets.Count))
         ws_data.Name = 'Cryptocurrency Data'
         
-        
+
         ws_analysis = wb.Sheets('Market Analysis') if 'Market Analysis' in sheet_names \
                       else wb.Sheets.Add(After=wb.Sheets(wb.Sheets.Count))
         ws_analysis.Name = 'Market Analysis'
 
         while True:
-            # Fetch live data
+            
             crypto_df = fetch_top_cryptocurrencies()
             
             if crypto_df is not None and not crypto_df.empty:
                 # Cryptocurrency Data Sheet
                 ws_data.Cells.Clear()
                 
-               
+              
                 headers = crypto_df.columns.tolist()
                 for col, header in enumerate(headers, start=1):
                     ws_data.Cells(1, col).Value = header
                 
-                
+               
                 for row in range(len(crypto_df)):
                     for col, header in enumerate(headers, start=1):
                         ws_data.Cells(row+2, col).Value = crypto_df.iloc[row][header]
                 
+               
                 analysis = perform_data_analysis(crypto_df)
                 
-               
+                
                 ws_analysis.Cells.Clear()
                 ws_analysis.Cells(1, 1).Value = 'Analysis Metric'
                 ws_analysis.Cells(1, 2).Value = 'Value'
@@ -158,11 +149,10 @@ def update_excel_sheet():
                     ws_analysis.Cells(row, 1).Value = metric
                     ws_analysis.Cells(row, 2).Value = str(value)
                 
-              
+                
                 ws_data.Columns.AutoFit()
                 ws_analysis.Columns.AutoFit()
                 
-           
                 wb.Save()
                 
                 logging.info("Cryptocurrency data updated successfully.")
